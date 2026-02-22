@@ -1,4 +1,4 @@
-## Spring 2025 - CS 519 - Project 1 - Part 2 (50 points, Due March 3rd, 11:55pm)  
+## Spring 2026 - CS 519 - Project 1 - Part 2 (60 points, Due March 5, 11:59 pm)  
 
 This project builds on the IPC concepts introduced in class. You will implement
 and benchmark inter-process communication (IPC) using both pipes and shared
@@ -14,7 +14,7 @@ In this part, you will implement a pipe-based and shared memory-based IPC
 communication between two processes. The "HW-1" folder contains (1) IPC-pipe.c
 and (2) IPC-shmem.c.
 
-#### Part 1.a IPC Message Passing Using Pipes (20 points)
+#### Part 1. IPC Message Passing Using Pipes (20 points)
 First, in IPC-pipe.c, you will add code that forks a child process (using
 fork()). The parent and child processes must communicate using Linux pipes and
 share work to perform matrix multiplication. The size of the matrix must be
@@ -48,14 +48,14 @@ Apply targeted optimizations and verify improvement with follow-up perf runs.
 Document scalability behaviour across core counts.
 
 Part 1.b IPC Using Shared Memory (15 points) Next, in IPC-shmem.c, you will add
-code to perform matrix multiplication when parent and child processes
+code to perform matrix multiplication when the parent and child processes
 communicate using shared memory by using calls like shmget() and shmat().
 
 Your code must allow multiple child processes to communicate and share work
 with the parent process.
 
 **Repeat the perf** experiments.  From your perf output, produce a table listing
-every significant overhead source. For each source identify the symbol or call
+every significant overhead source. For each source, identify the symbol or call
 responsible, the percentage of samples attributed to it, and its root cause. 
 
 
@@ -69,7 +69,7 @@ scaling.
 
 *As discussed in class, we will maintain a scoreboard, and the top 2 entries
 will get 15 points. The scores for other submissions will be based on how
-performant your code is related to the top-performing code. We will maintain a
+performant your code is compared to the top-performing code. We will maintain a
 scoreboard on the class webpage.*
 
 You must clearly show a graph that shows the core count (on the x-axis) and the
@@ -77,7 +77,7 @@ performance on the y-axis (similar to the Linux scalability paper). If your
 solution does not scale beyond a certain core count, you must explain why.
 
 To improve scalability, you can use existing lock implementations. In homework
-1, you had analyzed [different
+1. You had analyzed [different
 locks](https://github.com/RutgersCSSystems/cs519-sp25/tree/main/locks-bench). 
 This is just a reference. You are welcome to consider other lock implementations
 too.
